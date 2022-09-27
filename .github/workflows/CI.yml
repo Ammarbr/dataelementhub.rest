@@ -20,7 +20,7 @@ jobs:
     - name: Sync and merge upstream repository with your current repository
       uses: dabreadman/sync-upstream-repo@v1.3.0
       with:
-        upstream_repo: https://github.com/mig-frankfurt/dataelementhub.rest
+        upstream_repo: https://github.com/mig-frankfurt/dataelementhub.rest.git
         upstream_branch: develop
         downstream_branch: develop
         token: ${{ secrets.TOKEN }}
