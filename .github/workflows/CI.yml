@@ -24,3 +24,4 @@ jobs:
         upstream_branch: develop
         downstream_branch: develop
         token: ${{ secrets.TOKEN }}
+        SPAWN_LOGS: "false"
