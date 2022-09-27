@@ -49,7 +49,6 @@ jobs:
         with:
           push: true
           tags: user/app:latest
-          file: docker/Dockerfile
           no-cache: true
         
         
