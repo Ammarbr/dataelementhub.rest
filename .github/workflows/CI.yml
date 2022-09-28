@@ -2,10 +2,8 @@ name: CI
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
+  schedule:
+  - cron: "0 0 * * *"
 
 jobs:
 
