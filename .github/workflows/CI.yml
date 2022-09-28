@@ -58,7 +58,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: user/app:latest
+        tags: ammarbr/dehub-dev-rest:latest
         no-cache: true
         
         
