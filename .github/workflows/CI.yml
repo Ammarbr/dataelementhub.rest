@@ -24,7 +24,7 @@ jobs:
         token: ${{ secrets.TOKEN }}
         SPAWN_LOGS: "false"
         
-  build-docker-image:
+  build-and-push-docker-image:
     runs-on: ubuntu-latest
     environment: DEV
     needs: sync
