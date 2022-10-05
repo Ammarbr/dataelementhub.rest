@@ -1,7 +1,9 @@
-FROM openjdk:18-jdk-alpine
+FROM openjdk:15-jdk-alpine
 EXPOSE 8090
-RUN apk add sudo
+COPY docker/start.sh .
+RUN chmod +x ./start.sh
 RUN addgroup -S dehub && adduser -S dehub -G dehub
-RUN mkdir /var/exports
-RUN chown dehub:dehub /var/exports
 USER dehub:dehub
+ARG JAR_FILE=target/dehub-rest-1.3.0-SNAPSHOT.jar
+COPY ${JAR_FILE} /opt/app.jar
+ENTRYPOINT ["./start.sh"]
